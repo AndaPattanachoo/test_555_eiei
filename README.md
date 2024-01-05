@@ -1,6 +1,4 @@
 # 123
-javascript
-console.log("123)
 
 ```javascript
 let a = 10 ;
