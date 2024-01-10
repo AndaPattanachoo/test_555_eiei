@@ -4,8 +4,8 @@ pipline {
         APP_NAME = "test app name"
     }
     stages {
-        stages('Build Image'{
-            step {
+        stage('Build Image'{
+            steps {
                 sh "echo ${env.APP_NAME}"
             }
         })
