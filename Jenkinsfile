@@ -9,8 +9,6 @@ pipeline {
                 sh "echo ${env.APP_NAME}"
             }
         }
-    }
-    stages {
         stage('Build Stage (Docker)'){
             agent {label 'build-server'}
             steps {
