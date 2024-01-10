@@ -9,12 +9,10 @@ pipeline {
                 sh "echo ${env.APP_NAME}"
             }
         }
-    }
-    stages {
         stage('Build Stage (Docker)'){
             agent {label 'build-server'}
             steps {
-                sh "docker build -t ghcr.io/andapattanachoo/devops_1:latest"
+                sh "docker build -t ghcr.io/andapattanachoo/devops_1:latest ."
             }
         }
     }
