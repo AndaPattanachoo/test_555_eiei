@@ -12,7 +12,7 @@ pipeline {
         stage('Build Stage (Docker)'){
             agent {label 'build-server'}
             steps {
-                sh "docker build -t ghcr.io/andapattanachoo/devops_1:latest ."
+                sh "docker build -t ghcr.io/andapattanachoo/devops_1 ."
             }
         }
         stage('Deliver Docker Image') {
@@ -26,7 +26,7 @@ pipeline {
                 )]
             ){
                 sh "docker login ghcr.io -u ${env.githubUser} -p ${env.githubPassword}"
-                sh "docker push ghcr.io/andapattanachoo/devops_1:v1"
+                sh "docker push ghcr.io/andapattanachoo/devops_1"
             }
             }
         }
