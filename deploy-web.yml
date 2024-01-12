@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-1
+  name: user14
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops-1
+      app: user14
   template:
     metadata:
       labels:
-        app: devops-1
+        app: user14
     spec:
       containers:
-        - name: devops-1-server
+        - name: user14-server
           image: ghcr.io/andapattanachoo/devops-1
           ports:
             - containerPort: 80
@@ -21,12 +21,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops-1
+  name: user14
   labels:
-    app: devops-1
+    app: user14
 spec:
   selector:
-    app: devops-1
+    app: user14
   ports:
     - name: http
       protocol: TCP
