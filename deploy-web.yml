@@ -15,6 +15,7 @@ spec:
       containers:
         - name: user14-service-server
           image: ghcr.io/andapattanachoo/devops-1
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
