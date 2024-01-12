@@ -40,7 +40,7 @@ pipeline {
             steps{
                 script{
                     try {
-                        sh "kubctl delete -f deploy-web.yml"
+                        sh "kubectl delete -f deploy-web.yml"
                     }
                     catch(e){
                         sh "echo can not delete"
